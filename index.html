@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rayuwu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white">
+    <div>
+    <header>
+        <nav>
+            <ul class="hidden md:flex">
+                <li><button class="nav scrollhome">Home</button></li>
+                <li><button class="nav scrollButton">About</button></li>
+                <li><button class="nav scrollcontact">Contact</button></li>
+            </ul>
+            <button id="menu-toggle" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden">
+        <button id="menu-close" class="text-white text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="nav scrollhome">Home</button>
+        <button class="nav scrollButton">About</button>
+        <button  class="nav scrollcontact">Contact</button>
+    </div>
+    
+    <main class="target-home flex flex-col md:flex-row pt-0">
+        <div class="md:w-1/2">
+            <img alt="rayuwu" id="image" class="w-full h-full object-cover slide-in " height="100%vh" 
+                 src="https://cdn.discordapp.com/attachments/1333728212840222802/1354476239791984661/8e5f37484c41a6cbdb329b42510321481.jpg?ex=67e56dcc&is=67e41c4c&hm=a155f1b4f8d1557d6af9b2eeed477d678a426ca60754bbe9bdc3eb5ec7b271c8&" 
+                 width="800"/>
+        </div>
+        <div class="md:w-1/2 flex flex-col justify-center p-8 mb-0 slide-text">
+            <h1 class="text-red text-4xl font-bold leading-tight highlighted-text">Yo !!</h1>
+            <h2 class="text-red text-4xl font-bold leading-tight highlighted-text">Im Ray</h2>
+            <p class="mt-4 text-gray-400">
+                Click the button below to get more info..
+            </p>
+            <div class="mt-8 flex items-center space-x-4">
+                <button class="bg-white text-gray-900 px-6 py-2 rounded-full scrollButton">About</button>
+                <button class="flex items-center space-x-2">
+                    <button class="flex items-center space-x-2 play-audio">
+                        <i class="fas fa-play text-white"></i>
+                        <span>listen</span>
+                    </button>
+                    
+                    <audio autoplay>
+                        <source class="audio-source"  src="hehe.mp3" type="audio/mpeg">
+            
+                    </audio>
+                </button>
+            </div>
+        </div>
+    </main>
+   
+    <div class="about target-section">
+        <div class="container">
+            <div class="section">
+                <h1 class=" highlighted-text font-bold">About Me</h1>
+                <p class="fade-in">I am a passionate programmer and an engineering student. I love to explore new technologies and build amazing projects. 
+                    Welcome to my personal website where you can learn more about me and my work.</p>
+            </div>
+            <div class="section">
+                <h2 class="font-bold highlighted-text">Skills & Technologies</h2>
+                <div class="tech-logos fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+          
+          
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class=" target-contact flex flex-col items-center justify-center min-h-screen bg-black text-white target-contact">
+        <!-- Contact Form -->
+        <div class="w-full max-w-md mailsec p-6 rounded-lg shadow-lg contactsec">
+            <h2 class="text-2xl font-bold text-center mb-4">Contact</h2>
+            <form id="contact-form" class="space-y-4">
+                <input type="text" name="name" id="name" placeholder="Your Name" 
+                    class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" 
+                    class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none" required>
+                <textarea name="message" id="message" placeholder="Your Message..." 
+                    class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none h-32" required></textarea>
+                <button type="submit" class="w-full formsubmit  text-white p-3 rounded transition">
+                    Send Message
+                </button>
+                <p id="status" class="text-green-500 hidden text-center mt-2">Message Sent Successfully!</p>
+            </form>
+        </div>
+    
+        <!-- Social Media links -->
+        <div class="flex space-x-6 mt-12 fade-in">
+            <a href="https://github.com/theabsoluteray" target="_blank" class="text-gray-300 hover:text-white text-4xl p-3">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://open.spotify.com/user/31z5ocqbzhbwdgbqhpgsgz67h36u?si=1304d96a38eb4221" target="_blank" class="text-green-500 hover:text-green-400 text-4xl p-3">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://discord.com/users/721249954504638500" target="_blank" class="text-blue-500 hover:text-blue-400 text-4xl p-3">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://instagram.com/rayuwu04" target="_blank" class="text-pink-500 hover:text-pink-400 text-4xl p-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+    
+</body>
+<footer class="w-full text-center p-4 ">
+    <p>&copy; <span id="year"></span> Rayuwu. All Rights Reserved.</p>
+</footer>
+
+</html>
